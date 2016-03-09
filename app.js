@@ -41,6 +41,7 @@ function setup() {
 
 var authenticate = function (client, username, password, callback) {
     var connection = new deviceconnection(username, password.toString());
+    connection.iotclient.open(function(stuff){});
     client.connectiona = connection;
     client.user = username;
     authorized = true;
